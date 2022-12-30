@@ -2,7 +2,9 @@
  * ejemplos de uso de los Hooks
  * - useState() => cambiar el estado de un componente, editarlo o manejarlo
  * - useRef() => identificar los valores. referenciar elementos dentro de la vista
- * - useEffect() => controlar los cambios en la vista
+ * --asegura el valor de una variable/pero no renderiza, solo cambia cuando renderiza por
+ * otro efecto
+ * - useEffect() => controlar los cambios en la vista cada vez que sucede un cambio
  */
 
 import React, { useState, useRef, useEffect} from 'react'
@@ -33,11 +35,35 @@ const Ejemplo2 = () => {
      * se ejecuta aquello que este dentro del useEffect
      */
 
+    // useEffect(() => {
+    //     console.log('cambio en el estado del componente')
+    //     console.log('MOSTRANDO REFERENCIA DENTRO DEL DOOM')
+    //     console.log(miRef)
+    // })
+
+    /**
+     * ? ejemplo 2: 
+     * usamos el useEffect pero con que funcion queremos que se active
+     * en este caso con contador1
+     * cabe menciaonar que solo se puede usar un useEffect por que se toma siempre
+     * el ultimo
+     */
+    // useEffect(() => {
+    // console.log('cambio en el estado del componente')
+    // console.log('MOSTRANDO REFERENCIA DENTRO DEL DOOM')
+    // }, [calcular])
+    
+    /**
+     * ? ejemplo 3: 
+     * usamos el useEffect pero restringimos a los efectos que 
+     * queremos que responda
+     */
+    
+    
     useEffect(() => {
-        console.log('cambio en el estado del componente')
-        console.log('MOSTRANDO REFERENCIA DENTRO DEL DOOM')
-        console.log(miRef)
-    })
+    console.log('cambio en el estado del componente')
+    console.log('MOSTRANDO REFERENCIA DENTRO DEL DOOM')
+    }, [calcular, calcular2])
 
   return (
     <div>
