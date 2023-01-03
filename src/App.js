@@ -16,7 +16,8 @@ function App() {
         {/** ejemplo de useState, useEffect, useRef */}
         {/* <Ejemplo2/> */}
         {/* <Ejemplo3/> */}
-        <Ejemplo4 nombre = 'Gabriel'>
+        <Ejemplo4 nombre='Gabriel'>
+          
           <h3>
             Este contenido es pintado por el props.children
             </h3>
