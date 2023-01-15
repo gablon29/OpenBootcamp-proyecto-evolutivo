@@ -27,7 +27,7 @@ export const ComponentWillUnmountHook = () => {
             console.log('comportamiento antes de que el componente desaparezca')
             
         }
-        
-    }
+    },[] //solo queremos que se ejecute una vez.
     )
+        
 }

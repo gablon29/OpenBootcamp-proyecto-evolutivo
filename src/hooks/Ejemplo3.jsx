@@ -37,9 +37,9 @@ const ComponenteDos = () => {
     
 
     return (
-        <d1>
+        <h1>
             Clase: { contexto.clase}
-        </d1>
+        </h1>
     )
 }
 
